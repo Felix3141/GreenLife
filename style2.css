@@ -1,0 +1,109 @@
+a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: #000000;
+
+}
+
+:root{
+    /* responsive base font size: min 16px, scales with viewport, max 20px */
+    --base-font: clamp(16px, 1.6vw + 12px, 20px);
+}
+
+body{
+    background-color: #f1f1f1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: var(--base-font);
+    line-height: 1.6;
+    padding: 12px;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* responsive heading size */
+    font-size: clamp(28px, 6vw, 60px);
+    margin: 0.5rem 0;
+}
+
+p{
+    font-family: inherit;
+    font-size: 1rem; /* relative to body */
+    margin: 0 0 0.9rem 0;
+}
+
+table, tr, td {
+    tab-size: 20px;
+    -o-table-baseline: inherit;
+    width: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #000000;
+}
+
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(20px, 4vw, 32px);
+    margin: 0.5rem 0;
+}
+
+h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+td{
+    text-align: center;
+    padding: 12px;
+    font-family: inherit;
+}
+
+/* make images responsive on small screens */
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* small-screen tweaks */
+@media (max-width: 480px){
+  :root{ --base-font: 17px; }
+  td{ padding: 8px; }
+  h1{ font-size: clamp(24px, 8vw, 40px); }
+}
+header.site-header{
+    background-color: #62b66d;
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+a.brand{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(24px, 6vw, 48px);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Home button style (same look as main site) */
+.home-btn{
+    display:inline;
+    padding:0;
+    background:none; /* no button background */
+    color: #000000; /* black text */
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    font-weight:600;
+}
+.home-btn:hover{
+    text-decoration: underline;
+    opacity: 0.95;
+}
+.home-btn:focus{ outline: 3px solid rgba(0,0,0,0.12); outline-offset: 2px; }
+.home-btn.small{ font-size:14px; padding:0; }
+
+
